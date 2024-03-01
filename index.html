@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SmartShop</title>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!--Creacion del header -->
+    <header>
+        <nav>
+            <a id="cart" href="./index.html"><img src="./image/logoShop.png" id="logo" alt="logo" /></a>
+            <h4>Tienda Electronica SmartShop</h4>
+        </nav>
+    </header>
+    <!--Creacion de los productos -->
+    <main>
+        <div class="container">
+            <div class="row">
+                <!-- Elementos generados a partir del JSON -->
+                <main id="items" class="col-sm-8 row"></main>
+                <!-- Carrito -->
+                <aside class="col-sm-4">
+                    <h5 id="textCarrito">Carrito</h5>
+                    <!-- Elementos del carrito -->
+
+                    <hr>
+                    <!-- Precio total -->
+                    <div>
+                        <ul id="carrito" class="list-group"></ul>
+                        <p id="textTotal" class="text-right">Total: $ <span id="total"></span></p>
+                        <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                        <button id="boton-comprar" class="btn btn-success">Ver Factura</button>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+    <div id="ventanaModal" class="modal">
+        <div class="contenido-modal">
+            <span class="cerrar">&times;</span>
+            <h5>Detalles de la factura</h5>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Unidades</th>
+                        <th>Descripcion</th>
+                        <th>P/U</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="modalBody">
+
+                </tbody>
+            </table>
+            <hr />
+            <div class="float-right">
+                <h6 class="float" id="subtotal"></h6>
+                <h6 class="float" id="totalIva"></h6>
+                <h6 class="float" id="totalModal"></h6>
+            </div>
+            <hr />
+            <div>
+                <button id="boton-cancelar" class="btn btn-danger">Cancelar</button>
+                <button id="boton-aceptar" class="btn btn-success">Pagar</button>
+            </div>
+            <hr />
+        </div>
+    </div>
+    </div>
+    <!--Creacion del footer o pie de pagina -->
+    <footer>
+        <p>Investigacion UBD Virtual</p>
+    </footer>
+    <script src="./js/ListaProductos.js"></script>
+    <script src="./js/Funciones.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

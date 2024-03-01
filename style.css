@@ -1,0 +1,182 @@
+img {
+    width: 100px;
+    height: 100px;
+}
+
+#logo {
+    height: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: red;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 60px;
+}
+
+header nav div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+#logo {
+    height: 40px;
+    width: 40px;
+}
+
+a:hover:not(#cart) {
+    color: rgb(0, 0, 0);
+}
+
+header nav img {
+    height: 25px;
+}
+
+header {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.349);
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    box-shadow: 0 -3px 5px rgb(0, 0, 0, 0.349);
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+    margin-top: 1%;
+}
+
+#carritoLogo {
+    width: 40px;
+    height: 40px;
+}
+
+#cuentaCarrito {
+    background-color: red;
+    border-radius: 100%;
+    display: inline-block;
+    aspect-ratio: 1;
+    width: 15px;
+    line-height: 15px;
+    text-align: center;
+    position: absolute;
+}
+
+#carrito {
+    text-align: right;
+    width: 100%;
+}
+
+#carrito button {
+    float: right;
+    position: absolute;
+}
+
+#boton-vaciar,
+#boton-comprar {
+    align-items: center;
+    width: 50%;
+    float: left;
+    gap: 3px;
+}
+
+.modal {
+    display: none;
+    /* Por defecto, estará oculto */
+    position: fixed;
+    /* Posición fija */
+    z-index: 1;
+    /* Se situará por encima de otros elementos de la página*/
+    padding-top: 200px;
+    /* El contenido estará situado a 200px de la parte superior */
+    left: 0;
+    top: 0;
+    padding: 3%;
+    width: 100%;
+    /* Ancho completo */
+    height: 100%;
+    /* Algura completa */
+    overflow: auto;
+    /* Se activará el scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.349);
+    /* Color negro con opacidad del 50% */
+}
+
+/* Ventana o caja modal */
+.contenido-modal {
+    position: relative;
+    /* Relativo con respecto al contenedor -modal- */
+    background-color: white;
+    margin: auto;
+    /* Centrada */
+    padding: 20px;
+    width: 60%;
+    -webkit-animation-name: animarsuperior;
+    -webkit-animation-duration: 0.5s;
+    animation-name: animarsuperior;
+    animation-duration: 0.5s;
+    border-radius: 25px;
+    height: auto;
+    align-content: center;
+}
+
+/* Animación */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animarsuperior {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* Botón cerrar */
+.close {
+    color: black;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
